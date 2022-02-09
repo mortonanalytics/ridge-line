@@ -60,7 +60,7 @@
 			.duration(transitionSpeed)
 			.attr("d", function(d){ return line_function(d); });
       
-    const tooltip =   
+    const tooltip = d3.select('.toolTip');
     const toolLine =  chart.append('line').attr('class', 'toolLine');
 		const toolTipBox = svg.append("rect")
 					.attr('class', 'toolTipBox')
