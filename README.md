@@ -14,4 +14,6 @@ Ignore the lack of axis and labels - they've already been written.
 
 - tool tip/mouseover effect for each data point in the `msg` data object that produces a circle at that point on each line (x-axis placement should always be the same, y-axis placement is unique to each ridge line). Tool tip should track mouse placement.
 
-- 
+## Next steps
+
+- provide an estimate to Ryan Morton, morton@myMA.us. If agreed, offer will be provided over Gusto
