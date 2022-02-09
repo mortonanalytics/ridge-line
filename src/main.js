@@ -6,7 +6,7 @@ console.log(msg);
 const this_div = 'main',
   width = document.body.clientWidth,
   height = 400,
-  margin = {left:40, right:40, top:25, bottom:25}
+  margin = {left:40, right:40, top:25, bottom:25};
 
 const svg = d3.select('#'+ this_div)
   .append('svg')
@@ -51,7 +51,7 @@ const yScale = d3.scaleLinear()
 
 const that = {ridgeScale, xScale, yScale};
 
-addRidgeLines(chart, msg, that);
+addRidgeLines(svg, chart, msg, that);
 
 
 

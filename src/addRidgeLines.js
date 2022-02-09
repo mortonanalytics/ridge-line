@@ -1,5 +1,8 @@
- function addRidgeLines(chart,lys, that){
+ function addRidgeLines(svg, chart,lys, that){
 		var transitionSpeed = 1000;
+    const width = document.body.clientWidth,
+      height = 400,
+      margin = {left:40, right:40, top:25, bottom:25};
 		
 		var x = lys[0].mapping.x_var;
 		var y = lys[0].mapping.y_var
@@ -56,6 +59,27 @@
 			.ease(d3.easeQuad)
 			.duration(transitionSpeed)
 			.attr("d", function(d){ return line_function(d); });
+      
+    const tooltip =   
+    const toolLine =  chart.append('line').attr('class', 'toolLine');
+		const toolTipBox = svg.append("rect")
+					.attr('class', 'toolTipBox')
+					.attr("opacity", 0)
+					.attr("width", width - (margin.left + margin.right))
+					.attr("height", height - ( margin.top + margin.bottom))
+					.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+					.on("mouseover", function() { 
+						tooltip.style("display", null); 
+						toolLine.style("stroke", null); 
+						})
+					.on("mouseout", function() { 
+						tooltip.style("display", "none"); 
+						toolLine.style("stroke", "none"); 
+						})
+					.on("mousemove", scalePointPosition);
+    function scalePointPosition(){
+      
+    }
 
 	};
   
